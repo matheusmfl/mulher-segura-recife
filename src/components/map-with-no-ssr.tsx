@@ -35,11 +35,11 @@ const createMarkerIcon = (rating: number) => {
 
 export default function MapWithNoSSR() {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full z-10">
       <MapContainer
         center={[-8.0631, -34.8711]} // Centro em Marco Zero, Recife
         zoom={12}
-        style={{ height: "100%", width: "100%" }}
+        style={{ height: "100%", width: "100%", zIndex: 10 }}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
