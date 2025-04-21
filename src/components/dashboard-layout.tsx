@@ -8,6 +8,8 @@ import { usePathname } from "next/navigation"
 import { Map, Search, MessageSquare, User, Menu, X, Shield, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
+import Image from "next/image"
+import logo from '../../public/images/leaflet/LogoMulher.svg'
 
 interface DashboardLayoutProps {
   children: React.ReactNode
@@ -20,7 +22,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigation = [
     { name: "Mapa", href: "/dashboard", icon: Map },
     { name: "Buscar", href: "/dashboard/search", icon: Search },
-    { name: "Comunidade", href: "/dashboard/community", icon: MessageSquare },
+    { name: "Lugar de fala", href: "/dashboard/community", icon: MessageSquare },
     { name: "Perfil", href: "/dashboard/profile", icon: User },
   ]
 
@@ -30,8 +32,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className="hidden border-r border-gray-200 bg-white md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
         <div className="flex flex-1 flex-col overflow-y-auto pt-5">
           <div className="flex flex-shrink-0 items-center px-4">
-            <Shield className="h-8 w-8 text-purple-600" />
-            <span className="ml-2 text-xl font-bold text-purple-600">SeguraMulher</span>
+            <Image src={logo} alt="logo" className="h-8 w-8" />
+            <span className="ml-2 text-xl font-bold text-purple-600">Lugar de mulher</span>
           </div>
           <nav className="mt-8 flex-1 space-y-1 px-2">
             {navigation.map((item) => {
@@ -73,8 +75,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           <div className="flex h-full flex-col overflow-y-auto bg-white">
             <div className="flex items-center justify-between border-b border-gray-200 px-4 py-5">
               <div className="flex items-center">
-                <Shield className="h-7 w-7 text-purple-600" />
-                <span className="ml-2 text-lg font-bold text-purple-600">SeguraMulher</span>
+                <Image src={logo} alt="logo" className="h-7 w-7" />
+                <span className="ml-2 text-lg font-bold text-purple-600">Lugar de mulher</span>
               </div>
               <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                 <X className="h-5 w-5" />
@@ -130,8 +132,8 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <Menu className="h-6 w-6" />
               </Button>
               <div className="ml-2 flex items-center">
-                <Shield className="h-7 w-7 text-purple-600" />
-                <span className="ml-2 text-lg font-bold text-purple-600">SeguraMulher</span>
+                <Image src={logo} alt="logo" className="h-7 w-7" />
+                <span className="ml-2 text-lg font-bold text-purple-600">Lugar de mulher</span>
               </div>
             </div>
             <div>
