@@ -14,7 +14,7 @@ const geistMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Lugar de mulher - FPS APP",
-  description: "É uma grande de uma gatinha",
+  description: "Recife mais seguro para as mulheres",
 };
 
 export default function RootLayout({
